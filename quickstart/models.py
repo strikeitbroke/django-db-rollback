@@ -15,6 +15,9 @@ class Author(models.Model):
     name = models.CharField(max_length=100)
     bio = models.TextField(blank=True)
 
+    def __str__(self):
+        return self.name
+
 
 # Comment model (One-to-Many relationship with Article)
 class Comment(models.Model):
